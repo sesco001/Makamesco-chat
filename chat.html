@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Bois Chat 💬</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f0f0f0;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    #userList {
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      background: #fff;
+    }
+
+    #chatBox {
+      border: 1px solid #ccc;
+      height: 300px;
+      overflow-y: auto;
+      background: #fff;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    #inputArea {
+      display: flex;
+    }
+
+    #messageInput {
+      flex: 1;
+      padding: 8px;
+    }
+
+    #sendBtn {
+      padding: 8px 15px;
+      background-color: #0084ff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .message {
+      margin-bottom: 5px;
+    }
+
+    .own {
+      color: green;
+    }
+
+    .other {
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h2>Welcome to Bois Chat 💬</h2>
+
+  <div id="userList">
+    <strong>Online Users:</strong>
+    <ul id="users"></ul>
+  </div>
+
+  <div id="chatBox"></div>
+
+  <div id="inputArea">
+    <input type="text" id="messageInput" placeholder="Type a message..." />
+    <button id="sendBtn">Send</button>
+  </div>
+
+  <!-- Socket.IO -->
+  <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+  <script src="chat.js"></script>
+</body>
+</html>
